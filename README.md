@@ -1,4 +1,4 @@
-# GPTrans [[Paper]()] 
+# GPTrans [[Paper](https://arxiv.org/abs/2305.11424)] 
 
 
 <!-- ## Description -->
@@ -24,11 +24,11 @@ This project is released under the [Apache 2.0 license](LICENSE).
 If you find this project useful in your research, please consider cite:
 
 ```BibTeX
-@misc{2023gptrans,
-    title={Graph Propagation Transformer for Graph Representation Learning},
-    author={Zhe Chen and Hao Tan and Tao Wang and Tianrun Shen and Tong Lu and Qiuying Peng and Cheng Cheng and Yue Qi},
-    howpublished = {todo},
-    year={2023}
+@article{chen2023gptrans,
+  title={Graph Propagation Transformer for Graph Representation Learning},
+  author={Chen, Zhe and Tan, Hao and Wang, Tao and Shen, Tianrun and Lu, Tong and Peng, Qiuying and Cheng, Cheng and Qi, Yue},
+  journal={arXiv preprint arXiv:2305.11424},
+  year={2023}
 }
 ```
 
