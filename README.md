@@ -8,7 +8,7 @@ This paper presents a novel transformer architecture for graph representation le
 
 
 ## 🗓️ Schedule
-- [ ] Release code and models
+- [ ] Release code and models (We plan to release code and models in this month.)
 
 ## 🏠 Overview
 <img width="826" alt="image" src="https://github.com/czczup/GPTrans/assets/23737120/105c3aae-ac65-4fac-9e4a-94ff5436508a">
