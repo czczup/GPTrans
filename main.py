@@ -98,18 +98,6 @@ def build_criterion(config):
     else:
         raise ValueError(f'unknown {config.TRAIN.CRITERION}')
     return criterion
-
-
-def set_param_efficient_tuning(model, config):
-    frozen_keys = ['blocks.1', 'blocks.3', 'blocks.5', 'blocks.7', 'blocks.9', 'blocks.11',
-                   'blocks.13', 'blocks.15', 'blocks.17', 'blocks.19', 'blocks.21', 'blocks.23']
-    if config.TRAIN.PARAM_EFFICIENT_TUNING:
-        for k, v in model.named_parameters():
-            # v.requires_grad = False
-            for item in frozen_keys:
-                if item in k:
-                    v.requires_grad = False
-                    logger.info(f'param {k} is now not trainable')
                 
     
 def main(config):
@@ -120,7 +108,6 @@ def main(config):
     # build runner
     logger.info(f"Creating model:{config.MODEL.TYPE}/{config.MODEL.NAME}")
     model = build_model(config)
-    set_param_efficient_tuning(model, config)
     model.cuda()
     logger.info(str(model))
 
@@ -195,11 +182,8 @@ def main(config):
                                            lr_scheduler, loss_scaler, logger)
         performance, loss = validate(config, data_loader_val, model)
         logger.info(f"{config.DATA.METRIC} on the {len(dataset_val)} val graphs: {performance:.4f}")
-        try:
-            performance, loss = validate(config, data_loader_test, model)
-            logger.info(f"{config.DATA.METRIC} on the {len(dataset_test)} test graphs: {performance:.4f}")
-        except:
-            pass
+        performance, loss = validate(config, data_loader_test, model)
+        logger.info(f"{config.DATA.METRIC} on the {len(dataset_test)} test graphs: {performance:.4f}")
     elif config.MODEL.PRETRAINED:
         load_pretrained(config, model_without_ddp, logger)
         if data_loader_val is not None:
@@ -216,11 +200,8 @@ def main(config):
             best_performance_ema = load_ema_checkpoint(config, model_ema, logger)
             performance, loss = validate(config, data_loader_val, model_ema.ema)
             logger.info(f"[EMA] {config.DATA.METRIC} on the {len(dataset_val)} val graphs: {performance:.4f}")
-            try:
-                performance, loss = validate(config, data_loader_test, model_ema.ema)
-                logger.info(f"[EMA] {config.DATA.METRIC} on the {len(dataset_test)} test graphs: {performance:.4f}")
-            except:
-                pass
+            performance, loss = validate(config, data_loader_test, model_ema.ema)
+            logger.info(f"[EMA] {config.DATA.METRIC} on the {len(dataset_test)} test graphs: {performance:.4f}")
     if config.THROUGHPUT_MODE:
         throughput(data_loader_val, model, logger)
 
@@ -387,8 +368,8 @@ def calculate_performance(config, output, target):
         performance = evaluator.eval(input_dict)['mae']
         if output.shape[0] == 147037:
             print("save the output for the test set!")
-            input_dict = {'y_pred': output}
-            evaluator.save_test_submission(input_dict=input_dict, dir_path="./submit", mode='test-dev')
+            input_dict = {'y_pred': output.cpu().numpy()}
+            evaluator.save_test_submission(input_dict=input_dict, dir_path="./", mode='test-dev')
     elif config.DATA.METRIC == 'Accuracy':
         mask = ~torch.isnan(target)
         if config.TRAIN.REDUCE_ZERO_LABEL:
