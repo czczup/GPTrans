@@ -36,6 +36,8 @@ pip install torch==1.12.0+cu113 torchvision==0.13.0+cu113 torchaudio==0.12.0 --e
 ```
 
 - Install other requirements:
+
+```bash
 pip install timm==0.6.12
 pip install yacs==0.1.8
 pip install dgl==1.0.1
@@ -49,8 +51,6 @@ git clone https://github.com/NVIDIA/apex
 pip install ninja
 cd apex
 pip install -v --disable-pip-version-check --no-cache-dir --global-option="--cpp_ext" --global-option="--cuda_ext" ./
-```bash
-
 ```
 
 
