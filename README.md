@@ -6,7 +6,9 @@ This paper presents a novel transformer architecture for graph representation le
 
 ## 🗓️ Schedule
 
-- [ ] Release code and models (We plan to release code and models in this month.)
+- [ ] ZINC/PATTERN/CLUSTER/TSP models
+- [ ] MolHIV/MolPCBA models
+- [x] Release code and models
 
 ## 🏠 Overview
 
@@ -57,7 +59,7 @@ pip install -v --disable-pip-version-check --no-cache-dir --global-option="--cpp
 
 ### Model Zoo
 
-PCQM4Mv2
+**PCQM4Mv2**
 
 | Model     | #Param | validate MAE | Config                                                 | Model                                                                                  |
 |:---------:|:------:|:------------:|:------------------------------------------------------:|:--------------------------------------------------------------------------------------:|
@@ -66,7 +68,7 @@ PCQM4Mv2
 | GPTrans-B | 45.7M  | 0.0813       | [config](configs/pcqm4mv2/gptrans_base_pcqm4mv2.yaml)  | [model](https://huggingface.co/czczup/GPTrans/resolve/main/gptrans_base_pcqm4mv2.pth)  |
 | GPTrans-L | 86.0M  | 0.0809       | [config](configs/pcqm4mv2/gptrans_large_pcqm4mv2.yaml) | [model](https://huggingface.co/czczup/GPTrans/resolve/main/gptrans_large_pcqm4mv2.pth) |
 
-PCQM4M
+**PCQM4M**
 
 | Model     | #Param | validate MAE | Config                                             | Model                                                                                |
 |:---------:|:------:|:------------:|:--------------------------------------------------:|:------------------------------------------------------------------------------------:|
@@ -74,19 +76,6 @@ PCQM4M
 | GPTrans-S | 13.6M  | 0.1162       | [config](configs/pcqm4m/gptrans_small_pcqm4m.yaml) | [model](https://huggingface.co/czczup/GPTrans/resolve/main/gptrans_small_pcqm4m.pth) |
 | GPTrans-B | 45.7M  | 0.1153       | [config](configs/pcqm4m/gptrans_base_pcqm4m.yaml)  | [model](https://huggingface.co/czczup/GPTrans/resolve/main/gptrans_base_pcqm4m.pth)  |
 | GPTrans-L | 86.0M  | 0.1151       | [config](configs/pcqm4m/gptrans_large_pcqm4m.yaml) | [model](https://huggingface.co/czczup/GPTrans/resolve/main/gptrans_large_pcqm4m.pth) |
-
-MolPCBA
-
-| Model     | #Param | Test AP (paper) | Test AP | Config     | Model     |
-|:---------:|:------:|:---------------:|:-------:|:----------:|:---------:|
-| GPTrans-B | 45.7M  | 31.15±0.16      |         | [config]() | [model]() |
-| GPTrans-L | 86.0M  | 32.43±0.22      |         | [config]() | [model]() |
-
-MolHIV
-
-| Model     | #Param | Test AP (paper) | Test AP | Config     | Model     |
-|:---------:|:------:|:---------------:|:-------:|:----------:|:---------:|
-| GPTrans-B | 45.7M  | 81.26±0.32      |         | [config]() | [model]() |
 
 ### Evaluation
 

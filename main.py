@@ -22,7 +22,6 @@ from utils import accuracy_SBM
 from utils import NativeScalerWithGradNormCount as NativeScaler
 from utils import (load_checkpoint, load_pretrained, save_checkpoint,
                    auto_resume_helper, reduce_tensor, load_ema_checkpoint)
-from utils import all_gather_tensor
 from ddp_hooks import fp16_compress_hook
 
 try:
@@ -405,9 +404,11 @@ def calculate_performance(config, output, target):
         evaluator = Evaluator(name="ogbg-molpcba")
         if config.TRAIN.REDUCE_ZERO_LABEL:
             target = target - 1
-        input_dict = {'y_pred': output.sigmoid(), 'y_true': target.reshape(output.shape)}
+        target = target.reshape(output.shape)
+        input_dict = {'y_pred': output.sigmoid(), 'y_true': target}
         performance = evaluator.eval(input_dict)['ap']
     elif config.DATA.METRIC == 'F1_Score':
+        # TODO: add F1-score
         performance = None
     else:
         raise NotImplementedError
