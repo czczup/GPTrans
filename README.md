@@ -78,27 +78,27 @@ pip install -v --disable-pip-version-check --no-cache-dir --global-option="--cpp
 
 **MolHIV**
 
-| Model     | #Param | Test AP (paper) | Test AP | Config                                            | Model                                                                               |
-|:---------:|:------:|:---------------:|:-------:|:-------------------------------------------------:|:-----------------------------------------------------------------------------------:|
-| GPTrans-B | 45.7M  | 81.26 ± 0.32    | 81.49   | [config](configs/molhiv/gptrans_base_molhiv.yaml) | [model](https://huggingface.co/czczup/GPTrans/resolve/main/gptrans_base_molhiv.pth) |
+| Model     | #Param | Test AP (paper) | Val AP | Test AP | Config                                            | Model                                                                               |
+|:---------:|:------:|:---------------:|:------:|:-------:|:-------------------------------------------------:|:-----------------------------------------------------------------------------------:|
+| GPTrans-B | 45.7M  | 81.26 ± 0.32    | 81.61  | 81.49   | [config](configs/molhiv/gptrans_base_molhiv.yaml) | [model](https://huggingface.co/czczup/GPTrans/resolve/main/gptrans_base_molhiv.pth) |
 
 **ZINC**
 
-| Model        | #Param | Test MAE (paper) | Test MAE | Config                                        | Model                                                                             |
-|:------------:|:------:|:----------------:|:--------:|:---------------------------------------------:|:---------------------------------------------------------------------------------:|
-| GPTrans-Nano | 554K   | 0.077 ± 0.009    | 0.0770   | [config](configs/zinc/gptrans_nano_zinc.yaml) | [model](https://huggingface.co/czczup/GPTrans/resolve/main/gptrans_nano_zinc.pth) |
+| Model        | #Param | Test MAE (paper) | Val MAE | Test MAE | Config                                        | Model                                                                             |
+|:------------:|:------:|:----------------:|:-------:|:--------:|:---------------------------------------------:|:---------------------------------------------------------------------------------:|
+| GPTrans-Nano | 554K   | 0.077 ± 0.009    | 0.1133  | 0.0770   | [config](configs/zinc/gptrans_nano_zinc.yaml) | [model](https://huggingface.co/czczup/GPTrans/resolve/main/gptrans_nano_zinc.pth) |
 
 **PATTERN**
 
-| Model        | #Param | Test Acc (paper) | Test Acc | Config                                              | Model                                                                                |
-|:------------:|:------:|:----------------:|:--------:|:---------------------------------------------------:|:------------------------------------------------------------------------------------:|
-| GPTrans-Nano | 554K   | 86.731 ± 0.085   | 86.7489  | [config](configs/pattern/gptrans_nano_pattern.yaml) | [model](https://huggingface.co/czczup/GPTrans/resolve/main/gptrans_nano_pattern.pth) |
+| Model        | #Param | Test Acc (paper) | Val Acc | Test Acc | Config                                              | Model                                                                                |
+|:------------:|:------:|:----------------:|:-------:|:--------:|:---------------------------------------------------:|:------------------------------------------------------------------------------------:|
+| GPTrans-Nano | 554K   | 86.731 ± 0.085   | 86.6229 | 86.7489  | [config](configs/pattern/gptrans_nano_pattern.yaml) | [model](https://huggingface.co/czczup/GPTrans/resolve/main/gptrans_nano_pattern.pth) |
 
 **CLUSTER**
 
-| Model        | #Param | Test Acc (paper) | Test Acc | Config                                              | Model                                                                                |
-|:------------:|:------:|:----------------:|:--------:|:---------------------------------------------------:|:------------------------------------------------------------------------------------:|
-| GPTrans-Nano | 554K   | 78.069 ± 0.154   | 78.0705  | [config](configs/cluster/gptrans_nano_cluster.yaml) | [model](https://huggingface.co/czczup/GPTrans/resolve/main/gptrans_nano_cluster.pth) |
+| Model        | #Param | Test Acc (paper) | Val Acc | Test Acc | Config                                              | Model                                                                                |
+|:------------:|:------:|:----------------:|:-------:|:--------:|:---------------------------------------------------:|:------------------------------------------------------------------------------------:|
+| GPTrans-Nano | 554K   | 78.069 ± 0.154   | 78.2748 | 78.0705  | [config](configs/cluster/gptrans_nano_cluster.yaml) | [model](https://huggingface.co/czczup/GPTrans/resolve/main/gptrans_nano_cluster.pth) |
 
 ### Evaluation
 
@@ -203,15 +203,6 @@ sh dist_train.sh configs/pcqm4mv2/gptrans_large_pcqm4mv2.yaml 8
 
 </div>
 </details>
-
-## 🤝 Acknowledgement
-Thanks to the open source of the following projects:
-
-[Graphormer](https://github.com/microsoft/Graphormer) &#8194;
-[EGT](https://github.com/shamim-hussain/egt_pytorch) &#8194;
-[GraphGPS](https://github.com/rampasek/GraphGPS) &#8194;
-[OGB](https://github.com/snap-stanford/ogb) &#8194;
-
 
 ## 🎫 License
 
