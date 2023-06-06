@@ -369,7 +369,7 @@ def calculate_performance(config, output, target):
         if output.shape[0] == 147037:
             print("save the output for the test set!")
             input_dict = {'y_pred': output.cpu().numpy()}
-            evaluator.save_test_submission(input_dict=input_dict, dir_path="./", mode='test-dev')
+            evaluator.save_test_submission(input_dict=input_dict, dir_path="./submit", mode='test-dev')
     elif config.DATA.METRIC == 'Accuracy':
         mask = ~torch.isnan(target)
         if config.TRAIN.REDUCE_ZERO_LABEL:
