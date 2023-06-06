@@ -60,7 +60,7 @@ pip install -v --disable-pip-version-check --no-cache-dir --global-option="--cpp
 PCQM4Mv2
 
 | Model     | #Param | validate MAE | Config                                                 | Model                                                                                  |
-| --------- | ------ | ------------ | ------------------------------------------------------ | -------------------------------------------------------------------------------------- |
+|:---------:|:------:|:------------:|:------------------------------------------------------:|:--------------------------------------------------------------------------------------:|
 | GPTrans-T | 6.6M   | 0.0833       | [config](configs/pcqm4mv2/gptrans_tiny_pcqm4mv2.yaml)  | [model](https://huggingface.co/czczup/GPTrans/resolve/main/gptrans_tiny_pcqm4mv2.pth)  |
 | GPTrans-S | 13.6M  | 0.0823       | [config](configs/pcqm4mv2/gptrans_small_pcqm4mv2.yaml) | [model](https://huggingface.co/czczup/GPTrans/resolve/main/gptrans_small_pcqm4mv2.pth) |
 | GPTrans-B | 45.7M  | 0.0813       | [config](configs/pcqm4mv2/gptrans_base_pcqm4mv2.yaml)  | [model](https://huggingface.co/czczup/GPTrans/resolve/main/gptrans_base_pcqm4mv2.pth)  |
@@ -69,7 +69,7 @@ PCQM4Mv2
 PCQM4M
 
 | Model     | #Param | validate MAE | Config                                             | Model                                                                                |
-| --------- | ------ | ------------ | -------------------------------------------------- | ------------------------------------------------------------------------------------ |
+|:---------:|:------:|:------------:|:--------------------------------------------------:|:------------------------------------------------------------------------------------:|
 | GPTrans-T | 6.6M   | 0.1179       | [config](configs/pcqm4m/gptrans_tiny_pcqm4m.yaml)  | [model](https://huggingface.co/czczup/GPTrans/resolve/main/gptrans_tiny_pcqm4m.pth)  |
 | GPTrans-S | 13.6M  | 0.1162       | [config](configs/pcqm4m/gptrans_small_pcqm4m.yaml) | [model](https://huggingface.co/czczup/GPTrans/resolve/main/gptrans_small_pcqm4m.pth) |
 | GPTrans-B | 45.7M  | 0.1153       | [config](configs/pcqm4m/gptrans_base_pcqm4m.yaml)  | [model](https://huggingface.co/czczup/GPTrans/resolve/main/gptrans_base_pcqm4m.pth)  |
@@ -78,14 +78,14 @@ PCQM4M
 MolPCBA
 
 | Model     | #Param | Test AP (paper) | Test AP | Config     | Model     |
-| --------- | ------ | --------------- | ------- | ---------- | --------- |
+|:---------:|:------:|:---------------:|:-------:|:----------:|:---------:|
 | GPTrans-B | 45.7M  | 31.15±0.16      |         | [config]() | [model]() |
 | GPTrans-L | 86.0M  | 32.43±0.22      |         | [config]() | [model]() |
 
 MolHIV
 
 | Model     | #Param | Test AP (paper) | Test AP | Config     | Model     |
-| --------- | ------ | --------------- | ------- | ---------- | --------- |
+|:---------:|:------:|:---------------:|:-------:|:----------:|:---------:|
 | GPTrans-B | 45.7M  | 81.26±0.32      |         | [config]() | [model]() |
 
 ### Evaluation
@@ -94,40 +94,38 @@ MolHIV
 <summary> To evaluate GPTrans-T on PCQM4Mv2 with 1 GPU </summary>
 <br>
 <div>
-  
+
 ```shell
 wget https://huggingface.co/czczup/GPTrans/resolve/main/gptrans_tiny_pcqm4mv2.pth
 sh dist_train.sh configs/pcqm4mv2/gptrans_tiny_pcqm4mv2.yaml 1 --resume ./gptrans_tiny_pcqm4mv2.pth --eval
 ```
-  
+
 </div>
 </details>
-
 
 <details>
 <summary> To evaluate GPTrans-S on PCQM4Mv2 with 1 GPU </summary>
 <br>
 <div>
-  
+
 ```shell
 wget https://huggingface.co/czczup/GPTrans/resolve/main/gptrans_small_pcqm4mv2.pth
 sh dist_train.sh configs/pcqm4mv2/gptrans_small_pcqm4mv2.yaml 1 --resume ./gptrans_small_pcqm4mv2.pth --eval
 ```
-  
+
 </div>
 </details>
-
 
 <details>
 <summary> To evaluate GPTrans-B on PCQM4Mv2 with 1 GPU </summary>
 <br>
 <div>
-  
+
 ```shell
 wget https://huggingface.co/czczup/GPTrans/resolve/main/gptrans_base_pcqm4mv2.pth
 sh dist_train.sh configs/pcqm4mv2/gptrans_base_pcqm4mv2.yaml 1 --resume ./gptrans_base_pcqm4mv2.pth --eval
 ```
-  
+
 </div>
 </details>
 
@@ -135,12 +133,12 @@ sh dist_train.sh configs/pcqm4mv2/gptrans_base_pcqm4mv2.yaml 1 --resume ./gptran
 <summary> To evaluate GPTrans-L on PCQM4Mv2 with 1 GPU </summary>
 <br>
 <div>
-  
+
 ```shell
 wget https://huggingface.co/czczup/GPTrans/resolve/main/gptrans_large_pcqm4mv2.pth
 sh dist_train.sh configs/pcqm4mv2/gptrans_large_pcqm4mv2.yaml 1 --resume ./gptrans_large_pcqm4mv2.pth --eval
 ```
-  
+
 </div>
 </details>
 
@@ -154,9 +152,9 @@ sh dist_train.sh configs/pcqm4mv2/gptrans_large_pcqm4mv2.yaml 1 --resume ./gptra
 ```shell
 sh dist_train.sh configs/pcqm4mv2/gptrans_tiny_pcqm4mv2.yaml 8
 ```
+
 </div>
 </details>
-
 
 <details>
 <summary> To train GPTrans-S on PCQM4Mv2 with 8 GPU on 1 node </summary>
@@ -166,9 +164,9 @@ sh dist_train.sh configs/pcqm4mv2/gptrans_tiny_pcqm4mv2.yaml 8
 ```shell
 sh dist_train.sh configs/pcqm4mv2/gptrans_small_pcqm4mv2.yaml 8
 ```
+
 </div>
 </details>
-
 
 <details>
 <summary> To train GPTrans-B on PCQM4Mv2 with 8 GPU on 1 node </summary>
@@ -178,9 +176,9 @@ sh dist_train.sh configs/pcqm4mv2/gptrans_small_pcqm4mv2.yaml 8
 ```shell
 sh dist_train.sh configs/pcqm4mv2/gptrans_base_pcqm4mv2.yaml 8
 ```
+
 </div>
 </details>
-
 
 <details>
 <summary> To train GPTrans-L on PCQM4Mv2 with 8 GPU on 1 node </summary>
@@ -190,9 +188,9 @@ sh dist_train.sh configs/pcqm4mv2/gptrans_base_pcqm4mv2.yaml 8
 ```shell
 sh dist_train.sh configs/pcqm4mv2/gptrans_large_pcqm4mv2.yaml 8
 ```
+
 </div>
 </details>
-
 
 ## 🎫 License
 
