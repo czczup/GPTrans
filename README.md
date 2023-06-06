@@ -6,7 +6,6 @@ This paper presents a novel transformer architecture for graph representation le
 
 ## 🗓️ Schedule
 
-- [ ] 
 - [ ] MolPCBA & TSP models
 - [x] Release code and models
 
