@@ -225,7 +225,7 @@ def main(config):
         throughput(data_loader_val, model, logger)
 
     if config.EVAL_MODE:
-        return
+        exit()
 
     # train
     logger.info("Start training")

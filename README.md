@@ -6,8 +6,8 @@ This paper presents a novel transformer architecture for graph representation le
 
 ## 🗓️ Schedule
 
-- [ ] ZINC/PATTERN/CLUSTER/TSP models
-- [ ] MolHIV/MolPCBA models
+- [ ] ZINC/PATTERN/CLUSTER/
+- [ ] MolHIV/MolPCBA model
 - [x] Release code and models
 
 ## 🏠 Overview
@@ -76,6 +76,12 @@ pip install -v --disable-pip-version-check --no-cache-dir --global-option="--cpp
 | GPTrans-S | 13.6M  | 0.1162       | [config](configs/pcqm4m/gptrans_small_pcqm4m.yaml) | [model](https://huggingface.co/czczup/GPTrans/resolve/main/gptrans_small_pcqm4m.pth) |
 | GPTrans-B | 45.7M  | 0.1153       | [config](configs/pcqm4m/gptrans_base_pcqm4m.yaml)  | [model](https://huggingface.co/czczup/GPTrans/resolve/main/gptrans_base_pcqm4m.pth)  |
 | GPTrans-L | 86.0M  | 0.1151       | [config](configs/pcqm4m/gptrans_large_pcqm4m.yaml) | [model](https://huggingface.co/czczup/GPTrans/resolve/main/gptrans_large_pcqm4m.pth) |
+
+**MolHIV**
+
+| Model     | #Param | Test AP (paper) | Test AP | Config                                            | Model                                                                               |
+|:---------:|:------:|:---------------:|:-------:|:-------------------------------------------------:|:-----------------------------------------------------------------------------------:|
+| GPTrans-B | 45.7M  | 81.26±0.32      | 81.49   | [config](configs/molhiv/gptrans_base_molhiv.yaml) | [model](https://huggingface.co/czczup/GPTrans/resolve/main/gptrans_base_molhiv.pth) |
 
 ### Evaluation
 
