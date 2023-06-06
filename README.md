@@ -204,6 +204,15 @@ sh dist_train.sh configs/pcqm4mv2/gptrans_large_pcqm4mv2.yaml 8
 </div>
 </details>
 
+## 🤝 Acknowledgement
+Thanks to the open source of the following projects:
+
+[Graphormer](https://github.com/microsoft/Graphormer) &#8194;
+[EGT](https://github.com/shamim-hussain/egt_pytorch) &#8194;
+[GraphGPS](https://github.com/rampasek/GraphGPS) &#8194;
+[OGB](https://github.com/snap-stanford/ogb) &#8194;
+
+
 ## 🎫 License
 
 This project is released under the [Apache 2.0 license](LICENSE).
