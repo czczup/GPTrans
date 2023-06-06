@@ -210,6 +210,7 @@ Thanks to the open source of the following projects:
 [Graphormer](https://github.com/microsoft/Graphormer) &#8194;
 [EGT](https://github.com/shamim-hussain/egt_pytorch) &#8194;
 [GraphGPS](https://github.com/rampasek/GraphGPS) &#8194;
+[OGB](https://github.com/snap-stanford/ogb) &#8194;
 
 
 ## 🎫 License
