@@ -83,6 +83,12 @@ pip install -v --disable-pip-version-check --no-cache-dir --global-option="--cpp
 |:---------:|:------:|:---------------:|:-------:|:-------------------------------------------------:|:-----------------------------------------------------------------------------------:|
 | GPTrans-B | 45.7M  | 81.26±0.32      | 81.49   | [config](configs/molhiv/gptrans_base_molhiv.yaml) | [model](https://huggingface.co/czczup/GPTrans/resolve/main/gptrans_base_molhiv.pth) |
 
+**ZINC**
+
+| Model        | #Param | Test MAE (paper) | Test MAE | Config                                        | Model                                                                             |
+| ------------ | ------ | ---------------- | -------- | --------------------------------------------- | --------------------------------------------------------------------------------- |
+| GPTrans-Nano | 554K   | 0.077±0.009      | 0.0770   | [config](configs/zinc/gptrans_nano_zinc.yaml) | [model](https://huggingface.co/czczup/GPTrans/resolve/main/gptrans_nano_zinc.pth) |
+
 ### Evaluation
 
 <details>
