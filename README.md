@@ -90,59 +90,109 @@ MolHIV
 
 ### Evaluation
 
-To evaluate an `GPTrans-T` on PCQM4Mv2 with 1 GPU, run:
-
+<details>
+<summary> To evaluate GPTrans-T on PCQM4Mv2 with 1 GPU </summary>
+<br>
+<div>
+  
 ```shell
 wget https://huggingface.co/czczup/GPTrans/resolve/main/gptrans_tiny_pcqm4mv2.pth
-sh dist_train.sh configs/pcqm4mv2/gptrans_tiny_pcqm4mv2.yaml 1 --resume ./gptrans_tiny_pcqm4mv2.pth  --eval
+sh dist_train.sh configs/pcqm4mv2/gptrans_tiny_pcqm4mv2.yaml 1 --resume ./gptrans_tiny_pcqm4mv2.pth --eval
 ```
+  
+</div>
+</details>
 
-To evaluate an `GPTrans-S` on PCQM4Mv2 with 1 GPU, run:
 
+<details>
+<summary> To evaluate GPTrans-S on PCQM4Mv2 with 1 GPU </summary>
+<br>
+<div>
+  
 ```shell
 wget https://huggingface.co/czczup/GPTrans/resolve/main/gptrans_small_pcqm4mv2.pth
-sh dist_train.sh configs/pcqm4mv2/gptrans_small_pcqm4mv2.yaml 1 --resume ./gptrans_small_pcqm4mv2.pth  --eval
+sh dist_train.sh configs/pcqm4mv2/gptrans_small_pcqm4mv2.yaml 1 --resume ./gptrans_small_pcqm4mv2.pth --eval
 ```
+  
+</div>
+</details>
 
-To evaluate an `GPTrans-B` on PCQM4Mv2 with 1 GPU, run:
 
+<details>
+<summary> To evaluate GPTrans-B on PCQM4Mv2 with 1 GPU </summary>
+<br>
+<div>
+  
 ```shell
 wget https://huggingface.co/czczup/GPTrans/resolve/main/gptrans_base_pcqm4mv2.pth
-sh dist_train.sh configs/pcqm4mv2/gptrans_base_pcqm4mv2.yaml 1 --resume ./gptrans_base_pcqm4mv2.pth  --eval
+sh dist_train.sh configs/pcqm4mv2/gptrans_base_pcqm4mv2.yaml 1 --resume ./gptrans_base_pcqm4mv2.pth --eval
 ```
+  
+</div>
+</details>
 
-To evaluate an `GPTrans-L` on PCQM4Mv2 with 1 GPU, run:
-
+<details>
+<summary> To evaluate GPTrans-L on PCQM4Mv2 with 1 GPU </summary>
+<br>
+<div>
+  
 ```shell
 wget https://huggingface.co/czczup/GPTrans/resolve/main/gptrans_large_pcqm4mv2.pth
-sh dist_train.sh configs/pcqm4mv2/gptrans_large_pcqm4mv2.yaml 1 --resume ./gptrans_large_pcqm4mv2.pth  --eval
+sh dist_train.sh configs/pcqm4mv2/gptrans_large_pcqm4mv2.yaml 1 --resume ./gptrans_large_pcqm4mv2.pth --eval
 ```
+  
+</div>
+</details>
 
 ### Training
 
-To train an `GPTrans-T` on PCQM4Mv2 with 8 GPU on 1 node, run:
+<details>
+<summary> To train GPTrans-T on PCQM4Mv2 with 8 GPU on 1 node </summary>
+<br>
+<div>
 
 ```shell
 sh dist_train.sh configs/pcqm4mv2/gptrans_tiny_pcqm4mv2.yaml 8
 ```
+</div>
+</details>
 
-To train an `GPTrans-S` on PCQM4Mv2 with 8 GPU on 1 node, run:
+
+<details>
+<summary> To train GPTrans-S on PCQM4Mv2 with 8 GPU on 1 node </summary>
+<br>
+<div>
 
 ```shell
 sh dist_train.sh configs/pcqm4mv2/gptrans_small_pcqm4mv2.yaml 8
 ```
+</div>
+</details>
 
-To train an `GPTrans-B` on PCQM4Mv2 with 8 GPU on 1 node, run:
+
+<details>
+<summary> To train GPTrans-B on PCQM4Mv2 with 8 GPU on 1 node </summary>
+<br>
+<div>
 
 ```shell
 sh dist_train.sh configs/pcqm4mv2/gptrans_base_pcqm4mv2.yaml 8
 ```
+</div>
+</details>
 
-To train an `GPTrans-L` on PCQM4Mv2 with 8 GPU on 1 node, run:
+
+<details>
+<summary> To train GPTrans-L on PCQM4Mv2 with 8 GPU on 1 node </summary>
+<br>
+<div>
 
 ```shell
 sh dist_train.sh configs/pcqm4mv2/gptrans_large_pcqm4mv2.yaml 8
 ```
+</div>
+</details>
+
 
 ## 🎫 License
 
