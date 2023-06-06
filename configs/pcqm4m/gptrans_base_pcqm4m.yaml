@@ -1,0 +1,27 @@
+DATA:
+  TASK_TYPE: 'graph_regression'
+  DATASET: pcqm4m
+  SOURCE: ogb
+  MULTI_HOP_MAX_DIST: 20
+MODEL:
+  TYPE: GPTrans
+  DROP_PATH_RATE: 0.2
+  DROP_RATE: 0.1
+  ATTN_DROP_RATE: 0.1
+  GPTRANS:
+    NUM_LAYERS: 18
+    NUM_HEADS: 19
+    NODE_DIM: 608
+    EDGE_DIM: 76
+    LAYER_SCALE: 1.0
+    MLP_RATIO: 1.0
+TRAIN:
+  EMA:
+    ENABLE: True
+    DECAY: 0.9999
+  BASE_LR: 5e-4 # actual lr is 1e-3
+  OPTIMIZER:
+    NAME: fused_adamw
+  EPOCHS: 300
+  WEIGHT_DECAY: 0.05
+  USE_CHECKPOINT: False

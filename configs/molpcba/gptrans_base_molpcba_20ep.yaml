@@ -1,0 +1,39 @@
+DATA:
+  TASK_TYPE: 'graph_classification'
+  DATASET: ogbg-molpcba
+  SOURCE: ogb
+  MULTI_HOP_MAX_DIST: 20
+  TRAIN_MAX_NODES: 128
+  INFER_MAX_NODES: 128
+  BATCH_SIZE: 4 # 16 * 8 = 128
+  METRIC: 'AP'
+MODEL:
+  TYPE: GPTrans
+  DROP_PATH_RATE: 0.1
+  DROP_RATE: 0.1
+  ATTN_DROP_RATE: 0.1
+  PRETRAINED: 'work_dirs/pcqm4mv2/gptrans_base_pcqm4mv2/ckpt_epoch_ema_best.pth'
+  GPTRANS:
+    NUM_LAYERS: 18
+    NUM_HEADS: 19
+    NODE_DIM: 608
+    EDGE_DIM: 76
+    LAYER_SCALE: 1.0
+    MLP_RATIO: 1.0
+    NUM_CLASSES: 128
+TRAIN:
+  EMA:
+    ENABLE: True
+    DECAY: 0.9999
+  BASE_LR: 8e-4 # actual lr is 2e-4
+  MIN_LR: 4e-4
+  OPTIMIZER:
+    NAME: fused_adamw
+  EPOCHS: 20
+  WARMUP_EPOCHS: 1
+  WEIGHT_DECAY: 0.0
+  USE_CHECKPOINT: True
+  ACCUMULATION_STEPS: 1
+  CRITERION: 'bce'
+  RAND_INIT_FT_HEAD: True
+  REDUCE_ZERO_LABEL: True

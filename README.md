@@ -13,6 +13,36 @@ This paper presents a novel transformer architecture for graph representation le
 ## 🏠 Overview
 <img width="826" alt="image" src="https://github.com/czczup/GPTrans/assets/23737120/105c3aae-ac65-4fac-9e4a-94ff5436508a">
 
+## 🛠️ Installation
+
+- Clone this repo:
+
+```
+git clone https://github.com/czczup/GPTrans
+cd GPTrans
+```
+
+- Create a conda virtual environment and activate it:
+
+```
+conda create -n gptrans python=3.8 -y
+conda activate gptrans
+```
+
+- Install torch==1.12 with CUDA==11.3:
+
+```bash
+pip install torch==1.12.0+cu113 torchvision==0.13.0+cu113 torchaudio==0.12.0 --extra-index-url https://download.pytorch.org/whl/cu113
+```
+
+- Install other requirements:
+
+```bash
+
+```
+
+
+## 🎯 Get Started
 
 
 ## 🎫 License

@@ -1,0 +1,40 @@
+DATA:
+  TASK_TYPE: 'node_classification'
+  DATASET: pattern
+  SOURCE: pyg
+  NUM_ATOMS: 1027
+  NUM_EDGES: 1027
+  NUM_SPATIAL: 1027
+  MULTI_HOP_MAX_DIST: 5
+  NUM_EDGE_DIST: 5
+  NUM_IN_DEGREE: 188 # max to 188 nodes in PATTERN
+  NUM_OUT_DEGREE: 188 # max to 188 nodes in PATTERN
+  BATCH_SIZE: 32
+  METRIC: 'Accuracy'
+MODEL:
+  TYPE: GPTrans
+  DROP_PATH_RATE: 0.3
+  DROP_RATE: 0.3
+  ATTN_DROP_RATE: 0.5
+  GPTRANS:
+    NUM_LAYERS: 12
+    NUM_HEADS: 8
+    NODE_DIM: 80
+    EDGE_DIM: 40
+    LAYER_SCALE: None
+    MLP_RATIO: 1.0
+TRAIN:
+  EMA:
+    ENABLE: True
+    DECAY: 0.999
+  BASE_LR: 10e-4 # actual lr is 32 * 8 / 512 * 10e-4 = 5e-4
+  MIN_LR: 1e-9
+  OPTIMIZER:
+    NAME: fused_adamw
+  EPOCHS: 1000
+  WEIGHT_DECAY: 0.05
+  USE_CHECKPOINT: True
+  ACCUMULATION_STEPS: 8
+  CRITERION: 'bce'
+  CLASS_WEIGHTS: [1.0, 6.0]
+  REDUCE_ZERO_LABEL: True
