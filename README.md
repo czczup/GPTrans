@@ -102,6 +102,8 @@ pip install -v --disable-pip-version-check --no-cache-dir --global-option="--cpp
 
 ### Evaluation
 
+> Note: Datasets will be downloaded automatically.
+
 <details>
 <summary> To evaluate GPTrans-T on PCQM4Mv2 with 1 GPU </summary>
 <br>
