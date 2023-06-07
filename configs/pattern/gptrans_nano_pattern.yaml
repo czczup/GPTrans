@@ -9,7 +9,7 @@ DATA:
   NUM_EDGE_DIST: 5
   NUM_IN_DEGREE: 188 # max to 188 nodes in PATTERN
   NUM_OUT_DEGREE: 188 # max to 188 nodes in PATTERN
-  BATCH_SIZE: 32
+  BATCH_SIZE: 32 # 32 * 1 * 8 = 256
   METRIC: 'Accuracy'
 MODEL:
   TYPE: GPTrans
