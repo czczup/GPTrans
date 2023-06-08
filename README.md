@@ -82,6 +82,13 @@ pip install -v --disable-pip-version-check --no-cache-dir --global-option="--cpp
 |:---------:|:------:|:---------------:|:------:|:-------:|:-------------------------------------------------:|:-----------------------------------------------------------------------------------:|
 | GPTrans-B | 45.7M  | 81.26 ± 0.32    | 81.61  | 81.49   | [config](configs/molhiv/gptrans_base_molhiv.yaml) | [model](https://huggingface.co/czczup/GPTrans/resolve/main/gptrans_base_molhiv.pth) |
 
+**MolPCBA**
+
+| Model     | #Param | Test AP (paper) | Val AP | Test AP | Config                                            | Model                                                                               |
+|:---------:|:------:|:---------------:|:------:|:-------:|:-------------------------------------------------:|:-----------------------------------------------------------------------------------:|
+| GPTrans-B | 45.7M  | 31.15 ± 0.16    | 31.66  | 31.49   | [config](configs/molhiv/gptrans_base_molpcba.yaml) | [model](https://huggingface.co/czczup/GPTrans/resolve/main/gptrans_base_molpcba.pth) |
+
+
 **ZINC**
 
 | Model        | #Param | Test MAE (paper) | Val MAE | Test MAE | Config                                        | Model                                                                             |
