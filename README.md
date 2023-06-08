@@ -11,6 +11,9 @@
 
 This paper presents a novel transformer architecture for graph representation learning. The core insight of our method is to fully consider the information propagation among nodes and edges in a graph when building the attention module in the transformer blocks. Specifically, we propose a new attention mechanism called Graph Propagation Attention (GPA). It explicitly passes the information among nodes and edges in three ways, i.e. node-to-node, node-to-edge, and edge-to-node, which is essential for learning graph-structured data. On this basis, we design an effective transformer architecture named Graph Propagation Transformer (GPTrans) to further help learn graph data. We verify the performance of GPTrans in a wide range of graph learning experiments on several benchmark datasets. These results show that our method outperforms many state-of-the-art transformer-based graph models with better performance.
 
+<img width="511" alt="image" src="https://github.com/czczup/GPTrans/assets/23737120/32f064ab-0e37-4efd-8c30-e2c2c7d81f42">
+
+
 ## 🗓️ Schedule
 
 - [ ] MolPCBA & TSP models
