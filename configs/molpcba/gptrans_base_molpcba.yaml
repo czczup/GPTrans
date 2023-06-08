@@ -25,7 +25,7 @@ TRAIN:
   EMA:
     ENABLE: True
     DECAY: 0.9999
-  BASE_LR: 16e-4 # actual lr is 2e-4
+  BASE_LR: 16e-4 # actual lr is 4e-4
   MIN_LR: 1e-9
   OPTIMIZER:
     NAME: fused_adamw
