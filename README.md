@@ -111,6 +111,9 @@ pip install -v --disable-pip-version-check --no-cache-dir --global-option="--cpp
 
 > Note: Datasets will be downloaded automatically.
 
+> Note: There is a bug in multi-GPU evaluation, I will fix it. Please use single GPU to evaluate now.
+
+
 <details>
 <summary> To evaluate GPTrans-T on PCQM4Mv2 with 1 GPU </summary>
 <br>
