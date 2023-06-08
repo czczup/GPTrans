@@ -86,7 +86,7 @@ pip install -v --disable-pip-version-check --no-cache-dir --global-option="--cpp
 
 | Model     | #Param | Test AP (paper) | Val AP | Test AP | Config                                            | Model                                                                               |
 |:---------:|:------:|:---------------:|:------:|:-------:|:-------------------------------------------------:|:-----------------------------------------------------------------------------------:|
-| GPTrans-B | 45.7M  | 31.15 ± 0.16    | 31.66  | 31.49   | [config](configs/molhiv/gptrans_base_molpcba.yaml) | [model](https://huggingface.co/czczup/GPTrans/resolve/main/gptrans_base_molpcba.pth) |
+| GPTrans-B | 45.7M  | 31.15 ± 0.16    | 31.66  | 31.49   | [config](configs/molpcba/gptrans_base_molpcba.yaml) | [model](https://huggingface.co/czczup/GPTrans/resolve/main/gptrans_base_molpcba.pth) |
 
 
 **ZINC**
