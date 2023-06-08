@@ -60,12 +60,12 @@ pip install -v --disable-pip-version-check --no-cache-dir --global-option="--cpp
 
 **PCQM4Mv2**
 
-| Model     | #Param | validate MAE | Config                                                 | Model                                                                                  |
-|:---------:|:------:|:------------:|:------------------------------------------------------:|:--------------------------------------------------------------------------------------:|
-| GPTrans-T | 6.6M   | 0.0833       | [config](configs/pcqm4mv2/gptrans_tiny_pcqm4mv2.yaml)  | [model](https://huggingface.co/czczup/GPTrans/resolve/main/gptrans_tiny_pcqm4mv2.pth)  |
-| GPTrans-S | 13.6M  | 0.0823       | [config](configs/pcqm4mv2/gptrans_small_pcqm4mv2.yaml) | [model](https://huggingface.co/czczup/GPTrans/resolve/main/gptrans_small_pcqm4mv2.pth) |
-| GPTrans-B | 45.7M  | 0.0813       | [config](configs/pcqm4mv2/gptrans_base_pcqm4mv2.yaml)  | [model](https://huggingface.co/czczup/GPTrans/resolve/main/gptrans_base_pcqm4mv2.pth)  |
-| GPTrans-L | 86.0M  | 0.0809       | [config](configs/pcqm4mv2/gptrans_large_pcqm4mv2.yaml) | [model](https://huggingface.co/czczup/GPTrans/resolve/main/gptrans_large_pcqm4mv2.pth) |
+| Model     | #Param | validate MAE | test MAE                                                           | Config                                                 | Model                                                                                  |
+|:---------:|:------:|:------------:|:------------------------------------------------------------------:|:------------------------------------------------------:|:--------------------------------------------------------------------------------------:|
+| GPTrans-T | 6.6M   | 0.0833       | -                                                                  | [config](configs/pcqm4mv2/gptrans_tiny_pcqm4mv2.yaml)  | [model](https://huggingface.co/czczup/GPTrans/resolve/main/gptrans_tiny_pcqm4mv2.pth)  |
+| GPTrans-S | 13.6M  | 0.0823       | -                                                                  | [config](configs/pcqm4mv2/gptrans_small_pcqm4mv2.yaml) | [model](https://huggingface.co/czczup/GPTrans/resolve/main/gptrans_small_pcqm4mv2.pth) |
+| GPTrans-B | 45.7M  | 0.0813       | -                                                                  | [config](configs/pcqm4mv2/gptrans_base_pcqm4mv2.yaml)  | [model](https://huggingface.co/czczup/GPTrans/resolve/main/gptrans_base_pcqm4mv2.pth)  |
+| GPTrans-L | 86.0M  | 0.0809       | [0.0821](https://ogb.stanford.edu/docs/lsc/leaderboards/#pcqm4mv2) | [config](configs/pcqm4mv2/gptrans_large_pcqm4mv2.yaml) | [model](https://huggingface.co/czczup/GPTrans/resolve/main/gptrans_large_pcqm4mv2.pth) |
 
 **PCQM4M**
 
@@ -84,10 +84,9 @@ pip install -v --disable-pip-version-check --no-cache-dir --global-option="--cpp
 
 **MolPCBA**
 
-| Model     | #Param | Test AP (paper) | Val AP | Test AP | Config                                            | Model                                                                               |
-|:---------:|:------:|:---------------:|:------:|:-------:|:-------------------------------------------------:|:-----------------------------------------------------------------------------------:|
+| Model     | #Param | Test AP (paper) | Val AP | Test AP | Config                                              | Model                                                                                |
+|:---------:|:------:|:---------------:|:------:|:-------:|:---------------------------------------------------:|:------------------------------------------------------------------------------------:|
 | GPTrans-B | 45.7M  | 31.15 ± 0.16    | 31.66  | 31.49   | [config](configs/molpcba/gptrans_base_molpcba.yaml) | [model](https://huggingface.co/czczup/GPTrans/resolve/main/gptrans_base_molpcba.pth) |
-
 
 **ZINC**
 
@@ -112,7 +111,6 @@ pip install -v --disable-pip-version-check --no-cache-dir --global-option="--cpp
 > Note: Datasets will be downloaded automatically.
 
 > Note: There is a bug in multi-GPU evaluation, I will fix it. Please use single GPU to evaluate now.
-
 
 <details>
 <summary> To evaluate GPTrans-T on PCQM4Mv2 with 1 GPU </summary>
@@ -217,13 +215,13 @@ sh dist_train.sh configs/pcqm4mv2/gptrans_large_pcqm4mv2.yaml 8
 </details>
 
 ## 🤝 Acknowledgement
+
 Thanks to the open source of the following projects:
 
 [Graphormer](https://github.com/microsoft/Graphormer) &#8194;
 [EGT](https://github.com/shamim-hussain/egt_pytorch) &#8194;
 [GraphGPS](https://github.com/rampasek/GraphGPS) &#8194;
 [OGB](https://github.com/snap-stanford/ogb) &#8194;
-
 
 ## 🎫 License
 
