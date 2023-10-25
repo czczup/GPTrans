@@ -29,6 +29,6 @@ def build_model(config):
             random_feature=config.AUG.RANDOM_FEATURE,
         )
     else:
-        raise NotImplementedError(f"Unkown model: {model_type}")
+        raise NotImplementedError(f"Unknown model: {model_type}")
 
     return model

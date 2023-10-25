@@ -154,7 +154,7 @@ class DGLDatasetLookupTable:
                     feature_name = value
             inner_dataset = MyFakeNewsDataset(name=nm, feature_name=feature_name)
         else:
-            raise ValueError(f"Unknown dataset specificaion {dataset_name}")
+            raise ValueError(f"Unknown dataset specification {dataset_name}")
 
         return (
             None

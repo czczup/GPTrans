@@ -31,7 +31,7 @@ def floyd_warshall(adjacency_matrix):
             elif M[i][j] == 0:
                 M[i][j] = 510
 
-    # floyed algo
+    # floyd algo
     for k in range(n):
         M_k_ptr = M_ptr + n*k
         for i in range(n):
